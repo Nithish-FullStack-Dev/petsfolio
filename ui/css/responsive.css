@@ -44,6 +44,7 @@
   }
   button {
     padding: 15px 46px;
+    font-size: 18px;
   }
 
   .logo-img {
@@ -137,6 +138,12 @@
   }
   form button {
     padding: 23px 26px;
+    font-size: 18px;
+  }
+
+  .close-icon {
+    top: 14%;
+    right: 28%;
   }
 }
 @media (max-width: 970px) {
@@ -192,6 +199,7 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .faq-form {
     flex: 0 0 100%;
     max-width: 100%;
@@ -217,6 +225,10 @@
   }
   .social-media {
     gap: 41px;
+  }
+  .close-icon {
+    top: 12%;
+    right: 12%;
   }
 }
 
@@ -312,6 +324,10 @@
   p {
     font-size: 11px;
   }
+  .popup-faq-form {
+    margin: 0 50px;
+    min-width: 50%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -319,7 +335,6 @@
     width: 90%;
     margin: 0 auto;
   }
-
 
   .navbar {
     flex-direction: column;
@@ -347,6 +362,17 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  nav ul {
+    padding: 20px 0px;
+  }
+  nav ul li {
+    padding: 20px 0;
+    text-align: center;
+  }
+  form button a {
+    font-size: 16px;
   }
 
   nav ul {
@@ -391,11 +417,50 @@
     width: 100%;
     height: auto;
   }
+
+  .popup-faq-form form > input {
+    padding: 10px 9px;
+    font-size: 20px;
+  }
+  .popup-faq-form {
+    padding: 30px;
+  }
+  .popup-faq-form form button {
+    padding: 16px 12px;
+  }
+  input::placeholder {
+    font-size: 18px;
+  }
+  .popup-faq-form button {
+    font-size: 18px;
+  }
+  .close-icon {
+    top: 24%;
+    right: 17%;
+  }
 }
 
 @media (max-width: 380px) {
-  h5 {
+  h1 {
+    font-size: 25px;
+  }
+  h4 {
     font-size: 14px;
+  }
+  button {
+    padding: 8px 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  a {
+    font-size: 14px;
+  }
+  .welcome-content h4 {
+    margin-bottom: 37px;
+  }
+  h5 {
+    font-size: 12px;
   }
   .logo-img {
     width: 41%;
@@ -406,6 +471,53 @@
   nav ul li {
     padding: 20px 0;
     text-align: center;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+
+  .logo-img {
+    width: 31%;
+  }
+
+  nav ul li {
+    padding: 11px 0;
+    text-align: center;
+  }
+  nav ul {
+    padding: 7px 0px;
+  }
+
+  li {
+    font-size: 17px;
+  }
+  .download {
+    padding: 30px 0 24px 0;
+  }
+  .benifits {
+    padding: 76px 0;
+  }
+  .team-details {
+    padding: 134px 31px 134px 32px;
+  }
+  .team-sliders .slick-next {
+    right: 10%;
+  }
+  .team-sliders .slick-center .team-details::after,
+  .team-sliders .slick-center .team-details::before {
+    width: 22px;
+    height: 14px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  .team-section h3 {
+    margin-bottom: 38px;
+  }
+
+  .at-title h4 {
+    font-size: 14px;
   }
   form button a {
     font-size: 16px;
@@ -429,9 +541,6 @@
   .at-tab {
     padding: 20px 0 30px 29px;
   }
-  .at-title h4 {
-    font-size: 18px;
-  }
   .at-title.active:after {
     content: "";
   }
@@ -439,10 +548,70 @@
     content: "";
   }
   .at-tab h6 {
-    font-size: 17px;
+    font-size: 12px;
   }
-
+  .faq-form {
+    padding: 16px 14px;
+  }
+  form > input {
+    padding: 6px 9px;
+    font-size: 15px;
+  }
+  button {
+    font-size: 13px;
+  }
+  form button {
+    padding: 10px 4px;
+  }
   .about-content {
     gap: 28px;
+  }
+
+  .petsfolio h5 {
+    line-height: 20px;
+  }
+  .petsfolio h3 {
+    margin-bottom: 10px;
+  }
+  .play-store {
+    width: 85%;
+    height: auto;
+  }
+
+  .contact h5 {
+    margin-bottom: 2px;
+    line-height: 24px;
+  }
+  .contact #follow {
+    margin-top: 62px;
+    color: var(--orange-color);
+  }
+
+  .social-media {
+    gap: 32px;
+  }
+  p {
+    font-size: 6px;
+  }
+
+  .popup-faq-form form > input {
+    padding: 7px 11px;
+    font-size: 13px;
+  }
+  input::placeholder {
+    font-size: 10px;
+  }
+
+  .popup-faq-form {
+    padding: 13px 11px;
+  }
+  .popup-faq-form form button {
+    padding: 10px 11px;
+    font-size: 11px;
+  }
+
+  .close-icon {
+    top: 29%;
+    right: 17%;
   }
 }

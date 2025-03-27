@@ -12,6 +12,10 @@
   --fade-black: #222222;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +23,16 @@
 }
 main {
   position: relative;
+}
+
+#loader {
+  height: 100dvh;
+  width: 100%;
+  background: #00000076 url(../images/preloader.gif) no-repeat center center;
+  background-size: 15%;
+  position: fixed;
+  z-index: 50000;
+  top: 0;
 }
 
 .container {
@@ -96,6 +110,14 @@ a {
   color: var(--black-color);
 }
 
+button {
+  font-family: var(--Inter-font);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
 li {
   font-family: var(--Inter-font);
   font-weight: 400;
@@ -145,7 +167,7 @@ nav ul li {
   margin-bottom: 0;
 }
 
-nav ul li button{
+nav ul li button {
   text-align: center;
 }
 
@@ -438,7 +460,7 @@ nav ul li button{
 }
 
 .at-title:after {
-  content: "^";
+  content: url(../images/arrow.png);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -449,7 +471,7 @@ nav ul li button{
 }
 
 .at-title.active:after {
-  content: "-";
+  content: url(../images/down\ arrow.png);
 }
 
 .at-item {
@@ -583,4 +605,31 @@ footer {
 .footer-content {
   border-top: 0.5px solid #ffffffa1;
   padding-top: 15px;
+}
+
+.popup {
+  height: 100%;
+  width: 100%;
+  background-color: #00000059;
+  position: fixed;
+  top: 0;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-faq-form {
+  background-color: var(--light-pink);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.close-icon {
+  color: #fff;
+  position: absolute;
+  top: 14%;
+  right: 36%;
+  cursor: pointer;
+  font-size: 51px;
 }
