@@ -1,0 +1,448 @@
+:root {
+  --Inter-font: "Inter", sans-serif;
+  --Rum-font: "Rum Raisin", sans-serif;
+  --black-color: #000000;
+  --orange-color: #fe531d;
+  --white-color: #fff;
+  --light-blue: #f0f8f7;
+  --light-pink: #fff2f0;
+  --fade-black: #222222;
+}
+
+@media (max-width: 1919px) {
+  .welcome {
+    padding: 139px 0 188px 0;
+  }
+  h1 {
+    font-size: 56px;
+  }
+
+  /*! FAQ  */
+  .faq-content {
+    gap: 80px;
+  }
+  .faq-queries {
+    flex: 0 0 61%;
+    max-width: 61%;
+  }
+  .faq-form {
+    flex: 0 0 39%;
+    max-width: 39%;
+  }
+}
+@media (max-width: 1599px) {
+  .container {
+    width: 1150px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 47px;
+  }
+
+  a {
+    font-size: 19px;
+  }
+  button {
+    padding: 15px 46px;
+  }
+
+  .logo-img {
+    width: 174px;
+    height: 80px;
+  }
+
+  .welcome {
+    padding: 100px 0 100px 0;
+    margin-top: 109px;
+  }
+
+  .welcome-content {
+    max-width: 548px;
+  }
+  .download-cow-imgs {
+    gap: 20px;
+  }
+  .cow-imgs .cow-img {
+    width: 396px;
+    height: 228px;
+  }
+  .benifits-one img {
+    width: 598px;
+  }
+  .faq-content {
+    gap: 70px;
+  }
+  .faq-queries {
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+  .faq-form {
+    flex: 0 0 42%;
+    max-width: 42%;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    width: 850px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  a {
+    font-size: 17px;
+  }
+  li {
+    font-size: 19px;
+  }
+
+  nav {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  nav ul li button {
+    padding: 15px 21px;
+  }
+  .logo {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .welcome {
+    padding: 80px 0 80px 0;
+    background-size: 56% 100%;
+  }
+  .welcome-content {
+    max-width: 391px;
+  }
+
+  .cow-imgs .cow-img {
+    width: 279px;
+    height: 159px;
+  }
+  .free-guide-btn {
+    margin-bottom: 61px;
+  }
+  .benifits-one img {
+    width: 446px;
+  }
+
+  .faq-content {
+    gap: 50px;
+  }
+  form button {
+    padding: 23px 26px;
+  }
+}
+@media (max-width: 970px) {
+  .container {
+    width: 780px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 33px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+  a {
+    font-size: 17px;
+  }
+
+  button {
+    padding: 15px 33px;
+  }
+
+  .logo-img {
+    width: 172px;
+    height: 81px;
+  }
+  .logo {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  nav {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .cow-imgs .cow-img {
+    width: 247px;
+    height: 139px;
+  }
+  .faq-content {
+    gap: 40px;
+    flex-direction: column;
+  }
+  .faq-queries {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .faq-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .at-tab h6 {
+    font-size: 20px;
+  }
+  .at-title h4 {
+    font-size: 21px;
+  }
+  form button a {
+    font-size: 25px;
+  }
+  form > input {
+    padding: 22px 35px;
+    font-size: 32px;
+  }
+  input::placeholder {
+    font-size: 25px;
+  }
+  .petsfolio h5 {
+    line-height: 30px;
+  }
+  .social-media {
+    gap: 41px;
+  }
+}
+
+@media (max-width: 806px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 29px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  button {
+    padding: 15px 21px;
+  }
+  a {
+    font-size: 15px;
+  }
+  .welcome {
+    padding: 80px 0 80px 0;
+    background-size: 52% 100%;
+    margin-top: 98px;
+  }
+  .welcome-content {
+    max-width: 368px;
+  }
+  .welcome-content h1 {
+    margin-bottom: 16px;
+  }
+  .logo-img {
+    width: 70%;
+    height: auto;
+  }
+  .download-cow-imgs {
+    gap: 50px;
+    flex-direction: column;
+  }
+  .cow-imgs .cow-img {
+    width: 100%;
+    height: auto;
+  }
+  .benifits-content {
+    flex-direction: column;
+  }
+
+  .benifits-one {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .benifits-one img {
+    width: 90%;
+  }
+  .benifits-two {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .team-sliders .slick-prev:before,
+  .team-sliders .slick-next:before {
+    font-size: 45px;
+  }
+  .team-sliders .slick-prev {
+    left: -1%;
+  }
+  .team-sliders .slick-next {
+    right: 6%;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benifits-two {
+    padding-left: 43px;
+  }
+
+  .contact {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .play-store {
+    width: 100%;
+    height: auto;
+  }
+  .petsfolio {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
+  .navbar {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+
+  .navbar-hidden {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+  }
+
+  .logo {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    margin-right: 0;
+  }
+  nav a {
+    font-size: 23px;
+  }
+  .logo-img {
+    width: 60%;
+    height: auto;
+  }
+  .welcome {
+    background-image: none;
+  }
+  .welcome-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .welcome {
+    padding: 94px 0 105px 0;
+  }
+  #icon {
+    display: block !important;
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: end;
+  }
+  .fa-solid {
+    font-size: 30px;
+  }
+
+  .cow-imgs .cow-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .play-store {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  h5 {
+    font-size: 14px;
+  }
+  .logo-img {
+    width: 41%;
+  }
+  nav ul {
+    padding: 20px 0px;
+  }
+  nav ul li {
+    padding: 20px 0;
+    text-align: center;
+  }
+  form button a {
+    font-size: 16px;
+  }
+  .team-sliders .slick-prev {
+    left: -3%;
+    z-index: 1;
+  }
+  .team-section .team-img {
+    height: 100%;
+    width: 60%;
+    margin-bottom: -100px;
+  }
+
+  .team-heading {
+    margin-bottom: 56px;
+  }
+  .at-title {
+    padding: 27px 0 30px 22px;
+  }
+  .at-tab {
+    padding: 20px 0 30px 29px;
+  }
+  .at-title h4 {
+    font-size: 18px;
+  }
+  .at-title.active:after {
+    content: "";
+  }
+  .at-title:after {
+    content: "";
+  }
+  .at-tab h6 {
+    font-size: 17px;
+  }
+
+  .about-content {
+    gap: 28px;
+  }
+}
