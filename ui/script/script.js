@@ -4,7 +4,7 @@ $(document).ready(function () {
     centerPadding: "0px",
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
     focusOnSelect: true,
@@ -13,7 +13,7 @@ $(document).ready(function () {
         breakpoint: 1280,
         settings: {
           slidesToShow: 2,
-          centerPadding: "20px",
+          centerPadding: "0px",
         },
       },
       {
@@ -27,27 +27,54 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(".at-title").click(function () {
-    $(this)
-      .toggleClass("active")
-      .next(".at-tab")
-      .slideToggle()
-      .parent()
-      .siblings()
-      .find(".at-tab")
-      .slideUp()
-      .prev()
-      .removeClass("active");
-  });
+$(".download-cow-imgs").slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
-$(document).ready(function () {
-  $("#icon i").click(function () {
-    $(this).toggleClass("fa-xmark");
-    $(this).toggleClass("fa-bars");
-    $("#pc-nav ul").toggle(500);
-  });
+/* $('.download-cow-imgs').slick({
+  // infinite: true,
+   slidesToShow: 1,
+  // slidesToScroll: 1
+});
+ */
+
+$(".at-title").click(function () {
+  $(this)
+    .toggleClass("active")
+    .next(".at-tab")
+    .slideToggle()
+    .parent()
+    .siblings()
+    .find(".at-tab")
+    .slideUp()
+    .prev()
+    .removeClass("active");
+});
+
+$("#icon i").click(function () {
+  $(this).toggleClass("fa-xmark");
+  $(this).toggleClass("fa-bars");
+  $("#pc-nav ul").toggle(500);
 });
 
 let loader = document.getElementById("loader");
@@ -83,7 +110,7 @@ form.addEventListener("submit", (e) => {
 
   let faqForm = document.createElement("div");
   faqForm.classList.add("popup-faq-form");
-  popupParent.append( faqForm);
+  popupParent.append(faqForm);
 
   let form = document.createElement("form");
   form.setAttribute("id", "popup-form");
@@ -96,9 +123,10 @@ form.addEventListener("submit", (e) => {
     form.appendChild(input);
   });
 
-  const button = document.createElement("button");
+  const button = document.createElement("input");
   button.type = "submit";
-  button.textContent = "Start Your Punganur Journey";
+  button.setAttribute("id","btn")
+  button.value = "Start Your Punganur Journey";
   form.appendChild(button);
 
   $(".popup").fadeIn(300);
@@ -117,7 +145,16 @@ form.addEventListener("submit", (e) => {
   popupForm.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("form submitted successfully");
-    $(".popup").remove();
-    body.style.overflow = "auto"; 
+    $(".popup").fadeOut(300, () => {
+      $(".popup").remove();
+      body.style.overflow = "auto";
+    });
+  });
+});
+
+document.querySelector(".top-arrow").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
