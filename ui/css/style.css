@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +24,10 @@ html {
 }
 main {
   position: relative;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
 }
 
 #loader {
@@ -51,6 +56,7 @@ main {
   outline: none;
   border-radius: 14px;
   color: var(--white-color);
+  margin-top: 17px;
 }
 
 a {
@@ -197,9 +203,8 @@ nav ul li button {
 
 .welcome {
   background-color: var(--light-blue);
-  background: url(../images/welcome-image.png) no-repeat right / contain;
-  padding: 148px 0 228px 0;
   position: relative;
+  /* padding: 148px 0 228px 0; */
   margin-top: 120px;
 }
 
@@ -207,14 +212,36 @@ nav ul li button {
   content: "";
   background: url("../images/welcome-down-img.png") no-repeat bottom/cover;
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   right: 0;
   width: 1920px;
   height: 114px;
 }
 
 .welcome-content {
-  max-width: 659px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-content .welcome-matter {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 177px 0;
+}
+.welcome-content .welcome-page-slider {
+  flex: 0 0 73%;
+  max-width: 73%;
+}
+
+.welcome-slider-imga {
+  width: 100%;
+  height: 100%
+}
+
+.welcome-slider-imga img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .welcome-content h1 {
@@ -223,6 +250,71 @@ nav ul li button {
 
 .welcome-content h4 {
   margin-bottom: 50px;
+}
+
+.welcome-sliders .slick-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.welcome-sliders .slick-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.welcome-sliders .slick-next:before {
+  content: url(../images/less\ than\ arrow.png);
+  display: flex;
+  width: 18px;
+  height: 18px;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.welcome-sliders .slick-prev:before {
+  content: url(../images/greater\ than\ arrow.png);
+  display: flex;
+  width: 18px;
+  height: 18px;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+
+}
+
+.welcome-sliders .slick-prev {
+  left: 106px;
+  z-index: 20;
+}
+
+.welcome-sliders .slick-next {
+  right: 30px;
+}
+.welcome-sliders .slick-dots {
+  bottom: -22px;
+  z-index: 5;
+}
+
+.welcome-sliders .slick-dots li button:before {
+  color: var(--orange-color);
 }
 
 /*! DOWNLOAD SECTION  */
@@ -249,12 +341,16 @@ nav ul li button {
   margin-bottom: 44px;
 }
 
-/* .download-cow-imgs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-bottom: 45px;
-}*/
+.download-cow-imgs .slick-dots {
+  position: absolute;
+  bottom: -37px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
 
 .cow-imgs {
   /* flex: 0 0 calc((100% - 60px) / 3); */
@@ -264,6 +360,7 @@ nav ul li button {
 
 .download-cow-imgs {
   max-width: 100%;
+  display: flex;
 }
 
 .download-cow-imgs .slick-prev:before,
@@ -573,6 +670,7 @@ nav ul li button {
   height: 20px;
   justify-content: center;
   align-items: center;
+  opacity: 1;
 }
 
 .team-sliders .slick-prev {
@@ -596,6 +694,11 @@ nav ul li button {
   height: 20px;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-size: 17px;
 }
 
 /*! FAQ SECTION  */
@@ -628,7 +731,6 @@ nav ul li button {
 .at-tab {
   display: none;
   padding: 20px 11px 30px 45px;
-  border: 1px solid #dddddd;
   border-top: 1px solid #0000001a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: var(--light-blue);
@@ -640,10 +742,6 @@ nav ul li button {
   position: relative;
   transition: background-color 0.3s ease;
   padding: 30px 6px 30px 45px;
-}
-
-.at-title:hover {
-  background-color: #e0e0e0;
 }
 
 .at-title:after {
@@ -849,4 +947,17 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#icon i {
+  transition: transform 1s ease-in-out;
+}
+
+#icon i.fa-xmark {
+  transform: rotate(180deg);
+}
+
+#icon i.fa-bars{
+  transform: rotate(-180deg);
+
 }

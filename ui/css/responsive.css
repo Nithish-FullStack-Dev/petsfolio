@@ -10,9 +10,6 @@
 }
 
 @media (max-width: 1919px) {
-  .welcome {
-    padding: 139px 0 188px 0;
-  }
   h1 {
     font-size: 56px;
   }
@@ -30,6 +27,7 @@
     max-width: 39%;
   }
 }
+
 @media (max-width: 1599px) {
   .container {
     width: 1150px;
@@ -62,13 +60,9 @@
   }
 
   .welcome {
-    padding: 100px 0 100px 0;
     margin-top: 109px;
   }
 
-  .welcome-content {
-    max-width: 548px;
-  }
   /* .download-cow-imgs {
     gap: 20px;
   }
@@ -97,6 +91,60 @@
     width: 9px;
   } */
 }
+
+@media (max-width: 1846px) {
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 68%;
+    max-width: 68%;
+  }
+}
+@media (max-width: 1678px) {
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 1608px) {
+  .welcome-content .welcome-matter {
+    padding: 120px 0;
+  }
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 65%;
+    max-width: 62%;
+  }
+}
+
+@media (max-width: 1589px) {
+  .welcome-content .welcome-matter {
+    padding: 92px 0;
+  }
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 65%;
+    max-width: 61%;
+    margin-left: 193px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .welcome-content .welcome-matter {
+    padding: 99px 0;
+  }
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 65%;
+    max-width: 65%;
+    margin-left: 79px;
+  }
+}
+
+@media (max-width: 1430px) {
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-left: 80px;
+  }
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 850px;
@@ -128,13 +176,6 @@
   .logo {
     flex: 0 0 31%;
     max-width: 31%;
-  }
-  .welcome {
-    padding: 80px 0 80px 0;
-    background-size: 56% 100%;
-  }
-  .welcome-content {
-    max-width: 391px;
   }
 
   /* .cow-imgs .cow-img {
@@ -172,6 +213,47 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+  }
+  .download-cow-imgs .slick-prev {
+    left: -46px;
+  }
+  .team-details {
+    padding: 144px 11px 119px 21px;
+  }
+  .team-sliders .slick-center .team-details {
+    padding-bottom: 110px;
+  }
+  .team-section .team-img {
+    height: 157px;
+    width: 145px;
+    margin: auto;
+    margin-bottom: -89px;
+  }
+  .team-sliders .slick-center h5 {
+    font-size: 16px;
+  }
+  h5 {
+    font-family: var(--Inter-font);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .welcome-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .welcome-content .welcome-matter {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .welcome-content .welcome-page-slider {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 }
 @media (max-width: 970px) {
@@ -314,12 +396,7 @@
     font-size: 18px;
   }
   .welcome {
-    padding: 80px 0 80px 0;
-    background-size: 52% 100%;
     margin-top: 98px;
-  }
-  .welcome-content {
-    max-width: 368px;
   }
   .welcome-content h1 {
     margin-bottom: 16px;
@@ -345,6 +422,10 @@
   .download-cow-imgs .slick-dots .slick-active {
     width: 44px;
     height: 10px;
+  }
+
+  .welcome-sliders .slick-next {
+    right: 10px;
   }
 
   .team-sliders .slick-prev:before,
@@ -410,6 +491,16 @@
     justify-content: space-between;
     padding: 14px 0;
   }
+  .welcome-content h4 {
+    margin-bottom: 29px;
+  }
+  .welcome-content .welcome-matter {
+    padding: 52px 0;
+  }
+  .welcome-sliders .slick-prev {
+    left: 31px;
+    z-index: 20;
+  }
 
   .navbar-hidden {
     display: flex;
@@ -456,16 +547,6 @@
   .logo-img {
     width: 33%;
     height: auto;
-}
-  .welcome {
-    background-image: none;
-  }
-  .welcome-content {
-    max-width: 100%;
-    text-align: center;
-  }
-  .welcome {
-    padding: 94px 0 105px 0;
   }
   #icon {
     display: block !important;
@@ -558,7 +639,7 @@
 
   .team-sliders .slick-dots .slick-active {
     width: 44px;
-    height: 12px;
+    height: 16px;
   }
   .team-details::after {
     right: 22%;
@@ -568,6 +649,10 @@
     height: 100%;
     width: 44%;
     margin-bottom: -65px;
+  }
+
+  .welcome-content .welcome-matter {
+    padding: 54px 0;
   }
   .para-none {
     display: none;
@@ -761,10 +846,6 @@
   .download-cow-imgs .slick-prev {
     left: -14px;
     z-index: 20;
-  }
-
-  .welcome {
-    padding: 39px 0 117px 0;
   }
   .arrow-img {
     width: 31px;

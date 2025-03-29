@@ -12,7 +12,7 @@ $(document).ready(function () {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           centerPadding: "0px",
         },
       },
@@ -25,62 +25,84 @@ $(document).ready(function () {
       },
     ],
   });
-});
 
-$(".download-cow-imgs").slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: true,
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-});
+  $(".welcome-sliders").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade:true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow: '<button class="slick-prev">&#10094;</button>',
+    nextArrow: '<button class="slick-next">&#10095;</button>',
+  });
 
-/* $('.download-cow-imgs').slick({
-  // infinite: true,
-   slidesToShow: 1,
-  // slidesToScroll: 1
-});
- */
+  function initSlick() {
+    if ($(window).width() <= 1280) {
+      if (!$(".download-cow-imgs").hasClass("slick-initialized")) {
+        $(".download-cow-imgs").slick({
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      }
+    } else {
+      if ($(".download-cow-imgs").hasClass("slick-initialized")) {
+        $(".download-cow-imgs").slick("unslick");
+      }
+    }
+  }
 
-$(".at-title").click(function () {
-  $(this)
-    .toggleClass("active")
-    .next(".at-tab")
-    .slideToggle()
-    .parent()
-    .siblings()
-    .find(".at-tab")
-    .slideUp()
-    .prev()
-    .removeClass("active");
-});
+  initSlick();
 
-$("#icon i").click(function () {
-  $(this).toggleClass("fa-xmark");
-  $(this).toggleClass("fa-bars");
-  $("#pc-nav ul").toggle(500);
-});
+  $(window).resize(function () {
+    initSlick();
+  });
 
-let loader = document.getElementById("loader");
+  $(".at-title").click(function () {
+    $(this)
+      .toggleClass("active")
+      .next(".at-tab")
+      .slideToggle()
+      .parent()
+      .siblings()
+      .find(".at-tab")
+      .slideUp()
+      .prev()
+      .removeClass("active");
+  });
 
-window.addEventListener("load", () => {
-  loader.style.display = "none";
+  $("#icon i").click(function () {
+    $(this).toggleClass("fa-xmark fa-bars");
+    $("#pc-nav ul").toggle(500);
+  });
+
+  let loader = document.getElementById("loader");
+
+  window.addEventListener("load", () => {
+    loader.style.display = "none";
+  });
+
+  document.querySelector(".top-arrow").addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
 
 let form = document.forms[0];
@@ -103,11 +125,6 @@ form.addEventListener("submit", (e) => {
   popupParent.classList.add("popup");
   parent.append(popupParent);
 
-  // let icon = document.createElement("i");
-  // icon.classList.add("fa-solid");
-  // icon.classList.add("fa-xmark");
-  // icon.classList.add("close-icon");
-
   let faqForm = document.createElement("div");
   faqForm.classList.add("popup-faq-form");
   popupParent.append(faqForm);
@@ -125,7 +142,7 @@ form.addEventListener("submit", (e) => {
 
   const button = document.createElement("input");
   button.type = "submit";
-  button.setAttribute("id","btn")
+  button.setAttribute("id", "btn");
   button.value = "Start Your Punganur Journey";
   form.appendChild(button);
 
@@ -149,12 +166,5 @@ form.addEventListener("submit", (e) => {
       $(".popup").remove();
       body.style.overflow = "auto";
     });
-  });
-});
-
-document.querySelector(".top-arrow").addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
   });
 });
